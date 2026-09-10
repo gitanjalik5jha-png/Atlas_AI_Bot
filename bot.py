@@ -1,4 +1,21 @@
 import os
+from flask import Flask
+from threading import Thread
+
+flask_app = Flask('')
+
+@flask_app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run():
+    port = int(os.environ.get("PORT", 10000))
+    flask_app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.daemon = True
+    t.start()
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
@@ -74,4 +91,5 @@ if __name__ == '__main__':
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
 
     print("Bot is running...")
+        keep_alive()
     app.run_polling()

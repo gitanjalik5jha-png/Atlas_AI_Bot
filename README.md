@@ -22,4 +22,7 @@ Atlas AI Financial Assistant is a sophisticated, AI-powered conversational agent
 ## 🛠️ Setup & Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/gitanjalik5jha-png/Atlas_AI_Bot.git](https://github.com/gitanjalik5jha-png/Atlas_AI_Bot.git)
+   git clone [https://github.com/gitanjalik5jha-png/Atlas_AI_Bot.git](https://github.com/gitanjalik5jha-png/Atlas_AI_Bot.git
+
+
+https://t.me/AtlasFinAgentBot
